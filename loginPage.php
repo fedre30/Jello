@@ -21,12 +21,12 @@
           <div class="loginTitle"><p>Connexion à votre compte</p></div>
           <div class="loginFields">
             <div class="loginFieldsUser"><input id="enterUsername" placeholder="Nom de compte" type="text" name="username" value="<?= $messageID ?>">
-              <div class="icon"><img src="imgs/user_icon.png" alt="icon"></div>
-              <div id="validationUsername" class="validation"><img src="imgs/tick.png" alt="tick"></div>
+              <div class="icon"><img src="public/imgs/user_icon.png" alt="icon"></div>
+              <div id="validationUsername" class="validation"><img src="public/imgs/tick.png" alt="tick"></div>
             </div>
             <div class="loginFieldsPassword"><input id="enterPassword" placeholder="Mot de passe" type="password" name="password" value="<?= $messageID ?>">
-              <div class="icon"><img src="imgs/lock_icon.png" alt="icon"></div>
-              <div id="validationPassword" class="validation"><img src="imgs/tick.png" alt="tick"></div>
+              <div class="icon"><img src="public/imgs/lock_icon.png" alt="icon"></div>
+              <div id="validationPassword" class="validation"><img src="public/imgs/tick.png" alt="tick"></div>
             </div>
             <div class="loginFieldsSubmit"><input id="login" type="submit" value="Valider" name="submit"></div>
             <div class="forgotContainer">
@@ -56,21 +56,21 @@
             </div>
             <div class="registerFieldsEmailContainer">
               <div class="registerFieldsEmail"><input type="email" class="inputEmail" placeholder="Adresse E-mail" name="email"></div>
-              <div class="icon"><img src="imgs/mail.png" alt="icon"></div>
+              <div class="icon"><img src="public/imgs/mail.png" alt="icon"></div>
             </div>
             <div class="registerFieldsUser"><input id="enterUsernameRegister" placeholder="Nom de compte" type="text" name="usernameRegistration">
-              <div class="icon"><img src="imgs/user_icon.png" alt="icon"></div>
+              <div class="icon"><img src="public/imgs/user_icon.png" alt="icon"></div>
               <div id="validationUsernameRegister" class="validation">
-                  <img src="imgs/tick.png" alt="tick">
+                  <img src="public/imgs/tick.png" alt="tick">
                   <p><?= $usernameRegistrationErr ?></p>
               </div>
             </div>
             <div class="registerFieldsPassword"><input id="enterPasswordRegister" placeholder="Mot de passe" type="password" name="passwordRegistration">
               <div class="icon">
-                  <img src="imgs/lock_icon.png" alt="icon">
+                  <img src="public/imgs/lock_icon.png" alt="icon">
                   <p></p>
               </div>
-              <div id="validationPasswordRegister" class="validation"><img src="imgs/tick.png" alt="tick"></div>
+              <div id="validationPasswordRegister" class="validation"><img src="public/imgs/tick.png" alt="tick"></div>
             </div>
             <div class="registerFieldsSubmit"><input id="validate" type="submit" value="Valider" name="submitRegistration"></div>
             <div class="disclaimerRegister"><p>Inscrivez-vous pour accéder à toutes nos formations.</p></div>
