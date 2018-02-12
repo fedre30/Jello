@@ -13,7 +13,7 @@ class Database {
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
         ];
 
-        $this->db = new PDO('mysql:host='.HOST.':'.PORT.';dbname='.NAME, USERNAME, PASSWORD, $options);
+        $this->db = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
     }
 
     function createUser($firstName, $lastName, $email, $password) {
@@ -22,13 +22,23 @@ class Database {
             return false;
         }
 
-        $result = $this->db->exec("INSERT INTO users (lastName, firstName, email, password) VALUES ($0, $1, $2, $3)",
-            [$lastName, $firstName, $email, $passwordHashed]);
+        $stmt = $this->db->prepare("INSERT INTO users (lastName, firstName, email, password) VALUES (:lastName, :firstName, :email, :password)");
+        $stmt->execute([
+            ':lastName' => $lastName,
+            ':firstName' => $firstName,
+            ':email' => $email,
+            ':password' => $passwordHashed
+        ]);
+        $result = $stmt->rowCount();
+
         return $result === 1;
     }
 
     function connectUser($email, $password){
-        $result = $this->db->query("SELECT * FROM users WHERE email = $0", [$email]);
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE email = :email");
+        $stmt->execute([':email' => $email]);
+        $result = $stmt->fetchAll();
+
         if(count($result) === 0){
             return false;
         }
@@ -40,7 +50,17 @@ class Database {
             return false;
         }
         else{
+            setcookie("JelloUser", serialize(['id' => $result[0]['userID'], 'email' => $result[0]['email']]), time() + 60*60*24*365);
             return true;
         }
+    }
+
+    function createBoard($userId){
+        $stmt = $this->db->prepare("INSERT INTO boards(ownerID) VALUES (:userId)");
+        $stmt->execute([
+            ':userId' => $userId
+        ]);
+
+        // TODO: return true if everything is okay, else false
     }
 }
