@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/loginPage.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="public/style/reset.css">
     <title>loginPage <?php include(data.php); ?></title>
   </head>
   <body>
