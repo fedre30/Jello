@@ -124,6 +124,9 @@ if (empty ($_POST["passwordRegistration"]))
     $passwordRegistration = input_test($_POST["passwordRegistration"]);
 }
 
+// TO CREATE USER:
+// new Database().createUser($firstName, $lastName, $email, $passwordRegistration);
+
 
 //---------------------------
 // input_test function

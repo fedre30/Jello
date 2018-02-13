@@ -6,5 +6,7 @@
 <?php
     require_once './public/html/header.php';
 ?>
+
+<a href="public/html/addCard.php">Add card</a>
 </body>
 </html>

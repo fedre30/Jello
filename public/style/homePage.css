@@ -1,0 +1,76 @@
+body {
+    font-family: 'Gudea', sans-serif;
+}
+
+.navBar {
+    background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+    position: fixed;
+    width: 100vw;
+}
+
+.navbar__Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 1100px;
+    margin: auto;
+}
+
+.navBar__logo {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.navBar__logo:hover, .navBar__researchBtn:hover, .navBar__accountText:hover, .navBar__accountLogOut:hover  {
+    opacity: .7;
+    transition: ease-in-out .2s;
+}
+
+.navBar__logoLink {
+    color: #DC6180;
+}
+
+.navBar__research {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+}
+
+.navBar__researchInputText {
+    border: none;
+    height: 18px;
+    width: 200px;
+    background: #35394a;
+    border: 1px solid #DC6180;
+    border-radius: 6px;
+    outline: none;
+    color: #afb1be;
+    padding: 2px;
+}
+
+.navBar__account {
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBar__accountText {
+    color: #DC6180;
+}
+
+.navBar__accountLogOut {
+    color: #DC6180;
+}
+
+.navBar__researchBtn {
+    height: 22px;
+    border-radius: 6px;
+    color: #DC6180;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #DC6180;
+    outline: none;
+    cursor: pointer;
+}

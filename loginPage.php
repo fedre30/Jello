@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/loginPage.css">
+
     <link rel="stylesheet" href="css/reset.css">
     <title>loginPage</title>
+
   </head>
   <body>
     <div class="slidColorTop"></div>
@@ -21,6 +23,7 @@
           <div class="loginTitle"><p>Login to your account</p></div>
           <span class="error"> <?= $emptyField ?></span>
           <div class="loginFields">
+
             <div class="loginFieldsEmailContainer">
                 <div class="loginrFieldsEmail"><input type="email" class="inputEmail" placeholder="Email adress" name="email"></div>
                 <div class="icon"><img src="imgs/mail.png" alt="icon"></div>
@@ -28,6 +31,7 @@
             <div class="loginFieldsPassword"><input id="enterPassword" placeholder="Password" type="password" name="password" >
               <div class="icon"><img src="imgs/lock_icon.png" alt="icon"></div>
               <div id="validationPassword" class="validation"><img src="imgs/tick.png" alt="tick"></div>
+
             </div>
             <div class="loginFieldsSubmit"><input id="login" type="submit" value="Submit" name="submit"></div>
             <div class="forgotContainer">
@@ -55,6 +59,7 @@
               </div>
             </div>
             <div class="registerFieldsEmailContainer">
+
               <div class="registerFieldsEmail"><input type="email" class="inputEmail" placeholder="Email adress" name="email"></div>
               <div class="icon"><img src="imgs/mail.png" alt="icon"></div>
             </div>
@@ -63,10 +68,12 @@
                     <img src="imgs/lock_icon.png" alt="icon">
                 </div>
                 <div id="validationPasswordRegister" class="validation"><img src="imgs/tick.png" alt="tick"></div>
+
               </div>
               <div class="registerFieldsSubmit"><input id="validate" type="submit" value="Submit" name="submitRegistration"></div>
               <div class="disclaimerRegister"><p>Register to access Gello.</p></div>
             </div>
+
           </div>
 
         </form>
