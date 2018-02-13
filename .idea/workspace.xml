@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7f4d2ab-c0db-4a6d-9e89-06888abf5f38" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db.php" afterPath="$PROJECT_DIR$/src/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db.sql" afterPath="$PROJECT_DIR$/src/db.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,12 +58,12 @@
       <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="330">
+              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
               <folding>
-                <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-                <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-                <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+                <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+                <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+                <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
               </folding>
             </state>
           </provider>
@@ -249,7 +249,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5498000" />
+    <option name="totallyTimeSpent" value="5991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -320,9 +320,9 @@
         <state relative-caret-position="796">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -355,9 +355,9 @@
         <state relative-caret-position="496">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -375,9 +375,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -403,9 +403,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -431,9 +431,9 @@
         <state relative-caret-position="796">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -466,9 +466,9 @@
         <state relative-caret-position="496">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -486,9 +486,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -514,9 +514,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -542,9 +542,9 @@
         <state relative-caret-position="496">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -569,9 +569,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -597,9 +597,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -625,9 +625,9 @@
         <state relative-caret-position="796">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -660,9 +660,9 @@
         <state relative-caret-position="496">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -680,9 +680,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -708,9 +708,9 @@
         <state relative-caret-position="1675">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
@@ -800,12 +800,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="330">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
           <folding>
-            <marker date="1518533294223" expanded="true" signature="1076:1182" ph="INSERT INTO users... " />
-            <marker date="1518533294223" expanded="true" signature="1530:1570" ph="SELECT * FRO... users" />
-            <marker date="1518533294223" expanded="true" signature="2187:2231" ph="INSERT INTO boards... " />
+            <marker date="1518534897079" expanded="true" signature="1073:1179" ph="INSERT INTO users... " />
+            <marker date="1518534897079" expanded="true" signature="1533:1573" ph="SELECT * FRO... users" />
+            <marker date="1518534897079" expanded="true" signature="2199:2243" ph="INSERT INTO boards... " />
           </folding>
         </state>
       </provider>
