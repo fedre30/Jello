@@ -12,6 +12,7 @@ class Database {
         ];
 
         try{
+
             $this->db = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
         }
         catch(PDOException $e){
