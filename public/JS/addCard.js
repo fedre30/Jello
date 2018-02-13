@@ -29,7 +29,7 @@ var addList = () => {
         <div class="cardArea_wrapper">
         </div>
 
-        <img class="cardArea_addCard" src="../public/imgs/iconPlus.png" alt="addCard" numero="0">`
+        <img class="cardArea_addCard" src="/imgs/iconPlus.png" alt="addCard" numero="0">`
     tabContainer.appendChild(cardContainer)
 
     cardArea_container = document.querySelectorAll('.cardArea_container');

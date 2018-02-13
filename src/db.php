@@ -21,14 +21,6 @@ class Database
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "CREATE DATABASE IF NOT EXISTS jello";
             $conn->exec($sql);
-            $sql = "CREATE TABLE IF NOT EXISTS users (
-                     userID    INT PRIMARY KEY AUTO_INCREMENT,
-                    lastName  VARCHAR(128) NOT NULL,
-                    firstName VARCHAR(128) NOT NULL,
-                    email     VARCHAR(255) NOT NULL UNIQUE,
-                    password  CHAR(60)     NOT NULL)";
-            $conn->exec($sql);
-            
         }
 
     }
