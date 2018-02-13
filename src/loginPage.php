@@ -26,7 +26,7 @@
                     <div class="forgot"><a href="#">Username lost?</a></div>
                     <div class="forgot"><a href="#">Password lost?</a></div>
                 </div>
-                <div class="disclaimerLogin"><p>Log in to your account to access Gello.</p></div>
+                <div class="disclaimerLogin"><p>Log in to your account to access Jello.</p></div>
             </div>
         </div>
 

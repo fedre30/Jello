@@ -10,7 +10,14 @@ class Database {
         $options = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
         ];
-        $this->db = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
+
+        try{
+            $this->db = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
+        }
+        catch(PDOException $e){
+            die('DB Error');
+        }
+
     }
     function createUser($firstName, $lastName, $email, $password) {
         $passwordHashed = password_hash($password, PASSWORD_BCRYPT, ['cost'=>10]);
@@ -51,4 +58,23 @@ class Database {
         ]);
         // TODO: return true if everything is okay, else false
     }
+
+   /* function createLane($laneID) {
+        $stmt = $this->db->prepare("INSERT INTO boards(boardID) VALUES (:laneID)");
+        $stmt->execute([
+            ':laneId' => $laneID;
+        ]);
+    }
+
+    function createCard($cardID, $title, $description, $tags, $cardPosition) {
+        $stmt = $this->db->prepare("INSERT INTO board_lane(laneID) VALUES (:cardID, :title, :description, :tags, :cardPosition)");
+        $stmt->execute([
+            ':cardID' => $cardID;
+            ':title' => $title;
+            ':description' => $description;
+            ':tags' => $tags;
+            ':cardPosition' => $cardPosition;
+        ]);
+    }*/
+
 }
