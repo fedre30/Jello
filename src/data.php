@@ -6,8 +6,8 @@
  * Time: 11:45
  */
 
-session_start();
-include ('src/db.php');
+/*session_start();*/
+include ('src/init.php');
 // LOGIN INTERFACE
 
 /*echo "email : ";
