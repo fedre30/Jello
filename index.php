@@ -1,12 +1,10 @@
 <!doctype html>
 <html lang="en">
-<?php require ('public/html/head.php')
+<?php require ('src/head.php')
 ?>
 <body>
 <?php
-    require_once './public/html/header.php';
+    require_once 'src/loginPage.php';
 ?>
-
-<a href="public/html/addCard.php">Add card</a>
 </body>
 </html>

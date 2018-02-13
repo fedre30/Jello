@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <title>loginPage</title>
 
   </head>
-  <body>
+  <body>-->
     <div class="slidColorTop"></div>
     <div class="login_register">
       <!-- OPTION INTERFACE-->
@@ -78,6 +78,6 @@
 
         </form>
       </div>
-      <script type="text/javascript" src="JS/loginAndRegister.js"></script>
-    </body>
-  </html>
+      <script type="text/javascript" src="../public/JS/loginAndRegister.js"></script>
+   <!-- </body>
+  </html>-->
