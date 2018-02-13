@@ -10,7 +10,20 @@ class Database {
         $options = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
         ];
-        $this->db = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
+
+        try{
+            $conn = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "CREATE DATABASE IF NOT EXISTS jello";
+            $conn->exec($sql);
+            $sql = "use jello";
+            $conn->exec($sql);
+            echo "DB created successfully";
+        }
+        catch(PDOException $e){
+            die('DB Error');
+        }
+
     }
     function createUser($firstName, $lastName, $email, $password) {
         $passwordHashed = password_hash($password, PASSWORD_BCRYPT, ['cost'=>10]);
@@ -47,12 +60,12 @@ class Database {
     function createBoard($userId){
         $stmt = $this->db->prepare("INSERT INTO boards(ownerID) VALUES (:userId)");
         $stmt->execute([
-            ':userId' => $userId;
+            ':userId' => $userId
         ]);
         // TODO: return true if everything is okay, else false
     }
 
-    function createLane($laneID) {
+   /* function createLane($laneID) {
         $stmt = $this->db->prepare("INSERT INTO boards(boardID) VALUES (:laneID)");
         $stmt->execute([
             ':laneId' => $laneID;
@@ -68,6 +81,6 @@ class Database {
             ':tags' => $tags;
             ':cardPosition' => $cardPosition;
         ]);
-    }
+    }*/
 
 }
