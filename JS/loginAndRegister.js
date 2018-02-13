@@ -38,15 +38,6 @@ validate.addEventListener('mouseout', function() {
   validate.style.color = '';
 });
 // USER & PASSWORD VALIDATION
-var nb_username = 0;
-enterUsername.addEventListener('input', function() {
-  if (nb_username >= 6) {
-    validationUsername.style.right = '30px';
-    validationUsername.style.opacity = '1';
-  }
-  nb_username = nb_username + 1;
-  return console.log(nb_username);
-});
 
 var nb_password = 0;
 enterPassword.addEventListener('input', function() {
@@ -57,16 +48,6 @@ enterPassword.addEventListener('input', function() {
   }
   nb_password = nb_password + 1;
   return console.log(nb_password);
-});
-// USER & PASSWORD VALIDATION ANIMATION --REGISTER-- !Attention faille ultra badasse + méga bug du cosmos xD!
-var nb_usernameRegister = 0;
-enterUsernameRegister.addEventListener('input', function() {
-  if (nb_usernameRegister >= 6) {
-    validationUsernameRegister.style.right = '30px';
-    validationUsernameRegister.style.opacity = '1';
-  }
-  nb_usernameRegister = nb_usernameRegister + 1;
-  return console.log(nb_usernameRegister);
 });
 
 var nb_passwordRegister = 0;
