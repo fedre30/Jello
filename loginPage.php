@@ -4,36 +4,37 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/loginPage.css">
     <link rel="stylesheet" href="css/reset.css">
-    <title>loginPage <?php include(data.php); ?></title>
+    <title>loginPage</title>
   </head>
   <body>
     <div class="slidColorTop"></div>
     <div class="login_register">
       <!-- OPTION INTERFACE-->
       <div class="logAndRegisterScreenContainer">
-        <div id="connexion" class="loginScreen"><a href="#" class="loginScreenText">CONNEXION</a></div>
-        <div id="inscription" class="registerScreen"><a href="#" class="registerScreenText">INSCRIPTION</a></div>
+        <div id="connexion" class="loginScreen"><a href="#" class="loginScreenText">CONNECTION</a></div>
+        <div id="inscription" class="registerScreen"><a href="#" class="registerScreenText">REGISTRATION</a></div>
       </div>
       <!-- LOGIN INTERFACE-->
       <form class="formConnexion" action="data.php" method="post">
 
         <div class="loginScreenContainer">
-          <div class="loginTitle"><p>Connexion à votre compte</p></div>
+          <div class="loginTitle"><p>Login to your account</p></div>
+          <span class="error"> <?= $emptyField ?></span>
           <div class="loginFields">
-            <div class="loginFieldsUser"><input id="enterUsername" placeholder="Nom de compte" type="text" name="username" value="<?= $messageID ?>">
-              <div class="icon"><img src="imgs/user_icon.png" alt="icon"></div>
-              <div id="validationUsername" class="validation"><img src="imgs/tick.png" alt="tick"></div>
+            <div class="loginFieldsEmailContainer">
+                <div class="loginrFieldsEmail"><input type="email" class="inputEmail" placeholder="Email adress" name="email"></div>
+                <div class="icon"><img src="imgs/mail.png" alt="icon"></div>
             </div>
-            <div class="loginFieldsPassword"><input id="enterPassword" placeholder="Mot de passe" type="password" name="password" value="<?= $messageID ?>">
+            <div class="loginFieldsPassword"><input id="enterPassword" placeholder="Password" type="password" name="password" >
               <div class="icon"><img src="imgs/lock_icon.png" alt="icon"></div>
               <div id="validationPassword" class="validation"><img src="imgs/tick.png" alt="tick"></div>
             </div>
-            <div class="loginFieldsSubmit"><input id="login" type="submit" value="Valider" name="submit"></div>
+            <div class="loginFieldsSubmit"><input id="login" type="submit" value="Submit" name="submit"></div>
             <div class="forgotContainer">
-              <div class="forgot"><a href="#">Identifiant oublié?</a></div>
-              <div class="forgot"><a href="#">Mot de passe oublié?</a></div>
+              <div class="forgot"><a href="#">Username lost?</a></div>
+              <div class="forgot"><a href="#">Password lost?</a></div>
             </div>
-            <div class="disclaimerLogin"><p>Connectez-vous à votre compte pour accéder à vos formations en ligne.</p></div>
+            <div class="disclaimerLogin"><p>Log in to your account to access Gello.</p></div>
           </div>
         </div>
 
@@ -43,42 +44,33 @@
 
         <div class="registerScreenContainer">
           <div class="registerFields">
-            <div class="loginTitle"><p>M'inscrire gratuitement</p></div>
+            <div class="loginTitle"><p>Register for free</p></div>
+              <span class="error"> <?= $emptyField ?></span>
             <div class="personalInformationContainer">
               <div class="registerFieldsName">
-                  <input id="enterName" placeholder="Nom" type="text" name="name">
-                  <p><?= $nameErr ?></p>
+                  <input id="enterName" placeholder="Name" type="text" name="name">
               </div>
               <div class="registerFieldsFirstName">
-                  <input id="enterFirstName" placeholder="Prénom" type="text" name="firstName">
-                  <p><?= $firstNameErr ?></p>
+                  <input id="enterFirstName" placeholder="First name" type="text" name="firstName">
               </div>
             </div>
             <div class="registerFieldsEmailContainer">
-              <div class="registerFieldsEmail"><input type="email" class="inputEmail" placeholder="Adresse E-mail" name="email"></div>
+              <div class="registerFieldsEmail"><input type="email" class="inputEmail" placeholder="Email adress" name="email"></div>
               <div class="icon"><img src="imgs/mail.png" alt="icon"></div>
             </div>
-            <div class="registerFieldsUser"><input id="enterUsernameRegister" placeholder="Nom de compte" type="text" name="usernameRegistration">
-              <div class="icon"><img src="imgs/user_icon.png" alt="icon"></div>
-              <div id="validationUsernameRegister" class="validation">
-                  <img src="imgs/tick.png" alt="tick">
-                  <p><?= $usernameRegistrationErr ?></p>
+              <div class="registerFieldsPassword"><input id="enterPasswordRegister" placeholder="Password" type="password" name="passwordRegistration">
+                <div class="icon">
+                    <img src="imgs/lock_icon.png" alt="icon">
+                </div>
+                <div id="validationPasswordRegister" class="validation"><img src="imgs/tick.png" alt="tick"></div>
               </div>
+              <div class="registerFieldsSubmit"><input id="validate" type="submit" value="Submit" name="submitRegistration"></div>
+              <div class="disclaimerRegister"><p>Register to access Gello.</p></div>
             </div>
-            <div class="registerFieldsPassword"><input id="enterPasswordRegister" placeholder="Mot de passe" type="password" name="passwordRegistration">
-              <div class="icon">
-                  <img src="imgs/lock_icon.png" alt="icon">
-                  <p></p>
-              </div>
-              <div id="validationPasswordRegister" class="validation"><img src="imgs/tick.png" alt="tick"></div>
-            </div>
-            <div class="registerFieldsSubmit"><input id="validate" type="submit" value="Valider" name="submitRegistration"></div>
-            <div class="disclaimerRegister"><p>Inscrivez-vous pour accéder à toutes nos formations.</p></div>
           </div>
-        </div>
 
-      </form>
-    </div>
-    <script type="text/javascript" src="JS/loginAndRegister.js"></script>
-  </body>
-</html>
+        </form>
+      </div>
+      <script type="text/javascript" src="JS/loginAndRegister.js"></script>
+    </body>
+  </html>

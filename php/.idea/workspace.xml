@@ -23,42 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
-              <folding>
-                <element signature="e#6#97#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginPage.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginPage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../loginPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state relative-caret-position="-158">
+              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="33" />
               <folding>
-                <marker date="1518449865372" expanded="true" signature="2410:2836" ph="..." />
-                <marker date="1518449865372" expanded="true" signature="2457:2602" ph="..." />
-                <marker date="1518449865372" expanded="true" signature="2654:2817" ph="..." />
-                <marker date="1518449865372" expanded="true" signature="2891:3120" ph="..." />
-                <marker date="1518449865372" expanded="true" signature="3165:3570" ph="..." />
-                <marker date="1518449865372" expanded="true" signature="3418:3551" ph="..." />
-                <marker date="1518449865372" expanded="true" signature="3619:3996" ph="..." />
-                <marker date="1518449865372" expanded="true" signature="3757:3864" ph="..." />
+                <marker date="1518511448685" expanded="true" signature="2127:2207" ph="..." />
+                <marker date="1518511448685" expanded="true" signature="2166:2207" ph="..." />
+                <marker date="1518511448685" expanded="true" signature="2349:2693" ph="..." />
+                <marker date="1518511448685" expanded="true" signature="2396:2501" ph="..." />
+                <marker date="1518511448685" expanded="true" signature="2553:2674" ph="..." />
+                <marker date="1518511448685" expanded="true" signature="2748:2975" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-926">
-              <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="291">
+              <caret line="36" column="57" lean-forward="false" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -141,12 +127,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518430580638</updated>
-      <workItem from="1518430582894" duration="15964000" />
+      <workItem from="1518430582894" duration="26524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15964000" />
+    <option name="totallyTimeSpent" value="26524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -203,34 +189,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
-          <folding>
-            <element signature="e#6#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../loginPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-          <folding>
-            <marker date="1518449865372" expanded="true" signature="2410:2836" ph="..." />
-            <marker date="1518449865372" expanded="true" signature="2457:2602" ph="..." />
-            <marker date="1518449865372" expanded="true" signature="2654:2817" ph="..." />
-            <marker date="1518449865372" expanded="true" signature="2891:3120" ph="..." />
-            <marker date="1518449865372" expanded="true" signature="3165:3570" ph="..." />
-            <marker date="1518449865372" expanded="true" signature="3418:3551" ph="..." />
-            <marker date="1518449865372" expanded="true" signature="3619:3996" ph="..." />
-            <marker date="1518449865372" expanded="true" signature="3757:3864" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-926">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="291">
+          <caret line="36" column="57" lean-forward="false" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../loginPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <marker date="1518511448685" expanded="true" signature="2127:2207" ph="..." />
+            <marker date="1518511448685" expanded="true" signature="2166:2207" ph="..." />
+            <marker date="1518511448685" expanded="true" signature="2349:2693" ph="..." />
+            <marker date="1518511448685" expanded="true" signature="2396:2501" ph="..." />
+            <marker date="1518511448685" expanded="true" signature="2553:2674" ph="..." />
+            <marker date="1518511448685" expanded="true" signature="2748:2975" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

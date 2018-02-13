@@ -5,7 +5,7 @@
  * Date: 12/02/2018
  * Time: 11:45
  */
-include ('loginPage.php');
+
 // LOGIN INTERFACE
 
 /*echo "username : ";
@@ -31,36 +31,43 @@ echo "password : ";
 echo $_POST["passwordRegistration"];
 echo "<br>";*/
 
-/*if (empty ($_POST["username"] and !empty ($_POST["password"])))
-{
-    $msg_error = "NO_ID ";
-    $messageID = $msg_error;
-    echo $messageID;
-
-}
-elseif (!empty ($_POST["username"]) and empty ($_POST["password"]))
-{
-    $msg_error = " NO_PASSWORD";
-    $messagePWD = $msg_error;
-    echo $messagePWD;
-}
-elseif (!empty ($_POST["username"]) and !empty ($_POST["password"]))
-{
-    echo "ok";
-}*/
 //---------------------------
 // define variable and set it to empty
-$nameErr = $firstNameErr = $emailErr = $usernameRegistrationErr = $passwordRegistrationErr = "";
-$name = $firstName = $email = $usernameRegistration = $passwordRegistration = "";
+$emptyField = "";
+$name = $firstName = $email = /*$usernameRegistration =*/ $passwordRegistration = "";
+
+
+//---------------------------
+//Test for input account name - Login
+
+
+if (empty ($_POST["username"]))
+{
+    $emptyField = "*Empty Field";
+} else {
+    $name = input_test($_POST["username"]);
+}
+
+
+//---------------------------
+//Test for input password - login
+
+
+if (empty ($_POST["password"]))
+{
+    $emptyField = "*Empty Field";
+} else {
+    $name = input_test($_POST["password"]);
+}
+
 
 //---------------------------
 //Test for input name
 
-
 if (empty ($_POST["name"]))
 {
- $nameErr = "Entrez votre nom";
- echo $nameErr;
+    $emptyField = "*Empty Field";
+    //echo $nameErr;
 } else {
     $name = input_test($_POST["name"]);
 }
@@ -72,8 +79,8 @@ if (empty ($_POST["name"]))
 
 if (empty ($_POST["firstName"]))
 {
-    $firstNameErr = "Entrez votre prénom";
-    echo $firstNameErr;
+    $emptyField = "*Empty Field";
+    //echo $firstNameErr;
 } else {
     $firstName = input_test($_POST["firstName"]);
 }
@@ -85,8 +92,8 @@ if (empty ($_POST["firstName"]))
 
 if (empty ($_POST["email"]))
 {
-    $emailErr = "Entrez un email";
-    echo $emailErr;
+    $emptyField = "*Empty Field";
+    //echo $emailErr;
 } else {
     $email = input_test($_POST["email"]);
 }
@@ -96,13 +103,13 @@ if (empty ($_POST["email"]))
 //Test for input usernameRegistration
 
 
-if (empty ($_POST["usernameRegistration"]))
+/*if (empty ($_POST["usernameRegistration"]))
 {
-    $usernameRegistrationErr = "Entrez un nom de compte";
-    echo $usernameRegistrationErr;
+    $emptyField = "*Empty Field";
+    //echo $usernameRegistrationErr;
 } else {
     $usernameRegistration = input_test($_POST["usernameRegistration"]);
-}
+}*/
 
 
 //---------------------------
@@ -111,8 +118,8 @@ if (empty ($_POST["usernameRegistration"]))
 
 if (empty ($_POST["passwordRegistration"]))
 {
-    $passwordRegistrationErr = "Entrez un mot de passe";
-    echo $passwordRegistrationErr;
+    $emptyField = "*Empty Field";
+    //echo $passwordRegistrationErr;
 } else {
     $passwordRegistration = input_test($_POST["passwordRegistration"]);
 }
@@ -121,7 +128,17 @@ if (empty ($_POST["passwordRegistration"]))
 //---------------------------
 // input_test function
 
-function input_test($data) {
+function input_test($data)
+{
 
     return $data;
 }
+
+//---------------------------/////////////////////////////////////////////////
+// checkPassword function
+
+
+
+//---------------------------
+// communication between 'loginPage.php' & 'data.php'
+include ('loginPage.php');

@@ -252,24 +252,6 @@ body {
   box-shadow: none;
 }
 
-.registerFieldsUser input[type="text"] {
-  color: #afb1be;
-  width: 190px;
-  margin-top: -2px;
-  background: #32364a;
-  left: 0;
-  padding: 10px 65px;
-  border-top: 2px solid #393d52;
-  border-bottom: 2px solid #393d52;
-  border-right: none;
-  border-left: none;
-  outline: none;
-  font-family: 'Gudea', sans-serif;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  margin-bottom: 5px;
-}
-
 .registerFields input[type="password"] {
   color: #DC6180;
   width: 190px;
@@ -285,6 +267,13 @@ body {
   font-family: 'Gudea', sans-serif;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.error {
+  color: #DC6180;
+  position: absolute;
+  left: 10%;
+  top: 28%;
 }
 
 .registerFields input[type="email"] {
@@ -305,8 +294,30 @@ body {
   margin-bottom: 20px;
 }
 
-.registerFieldsUser {
-  position: relative;
+.loginFields input[type="email"] {
+  color: #DC6180;
+  width: 190px;
+  margin-top: -2px;
+  background: #32364a;
+  left: 0;
+  padding: 10px 65px;
+  border-top: 2px solid #393d52;
+  border-bottom: 2px solid #393d52;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  font-family: 'Gudea', sans-serif;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 5px;
+}
+
+.loginFieldsEmailContainer .icon {
+  position: absolute;
+  z-index: 1;
+  left: 28px;
+  top: 33.6%;
+  opacity: .5;
 }
 
 .registerFieldsEmailContainer .icon {
@@ -314,14 +325,6 @@ body {
   z-index: 1;
   left: 28px;
   top: 193px;
-  opacity: .5;
-}
-
-.registerFieldsUser .icon {
-  position: absolute;
-  z-index: 1;
-  left: 36px;
-  top: 8px;
   opacity: .5;
 }
 
