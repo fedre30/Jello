@@ -548,7 +548,7 @@ body {
 
 .modal_overlay {
   position: fixed;
-  background: rgba(50, 54, 74, 0.1);
+  background: #393D52;
   z-index: -1;
   top: 0;
   left: 0;
@@ -563,18 +563,20 @@ body {
   width: 800px;
   height: 400px;
   border-radius: 10px;
-  background: #afb1be;
+  background: #393D52;
 }
 
 .modal_title {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #D4EAC8;
 }
 
 .modal_list {
   font-size: 14px;
   margin-bottom: 20px;
+  color: #D4EAC8;
 }
 
 .modal_selectedList {
@@ -588,11 +590,15 @@ body {
 
 .modal_description {
   width: 600px;
+  color: #D4EAC8;
+  line-height: 2em;
+
 }
 
 .modal_addAction {
   display: flex;
   margin-top: 60px;
+  color: #D4EAC8;
 }
 
 .modal_addAction_title {
@@ -615,3 +621,4 @@ body {
   margin-right: 20px;
   cursor: pointer;
 }
+

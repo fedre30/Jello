@@ -66,6 +66,7 @@
 
     </div>
   </div>
+
 <a href="addCard.php">ADD CARD</a>
 <a href="modal.php">MODAL</a>
 
