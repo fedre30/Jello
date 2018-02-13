@@ -12,8 +12,13 @@ class Database {
         ];
 
         try{
-
-            $this->db = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
+            $conn = new PDO('mysql:host='.Database::HOST.':'.Database::PORT.';dbname='.Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "CREATE DATABASE IF NOT EXISTS jello";
+            $conn->exec($sql);
+            $sql = "use jello";
+            $conn->exec($sql);
+            echo "DB created successfully";
         }
         catch(PDOException $e){
             die('DB Error');
