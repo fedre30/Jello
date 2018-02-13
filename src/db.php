@@ -47,8 +47,27 @@ class Database {
     function createBoard($userId){
         $stmt = $this->db->prepare("INSERT INTO boards(ownerID) VALUES (:userId)");
         $stmt->execute([
-            ':userId' => $userId
+            ':userId' => $userId;
         ]);
         // TODO: return true if everything is okay, else false
     }
+
+    function createLane($laneID) {
+        $stmt = $this->db->prepare("INSERT INTO boards(boardID) VALUES (:laneID)");
+        $stmt->execute([
+            ':laneId' => $laneID;
+        ]);
+    }
+
+    function createCard($cardID, $title, $description, $tags, $cardPosition) {
+        $stmt = $this->db->prepare("INSERT INTO board_lane(laneID) VALUES (:cardID, :title, :description, :tags, :cardPosition)");
+        $stmt->execute([
+            ':cardID' => $cardID;
+            ':title' => $title;
+            ':description' => $description;
+            ':tags' => $tags;
+            ':cardPosition' => $cardPosition;
+        ]);
+    }
+
 }
