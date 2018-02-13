@@ -6,10 +6,12 @@
  * Time: 11:45
  */
 
+session_start();
+include ('src/db.php');
 // LOGIN INTERFACE
 
-/*echo "username : ";
-echo $_POST["username"];
+/*echo "email : ";
+echo $_POST["email"];
 echo "<br>";
 echo "password : ";
 echo $_POST["password"];
@@ -34,18 +36,18 @@ echo "<br>";*/
 //---------------------------
 // define variable and set it to empty
 $emptyField = "";
-$name = $firstName = $email = /*$usernameRegistration =*/ $passwordRegistration = "";
+$lastName = $firstName = $email =  $passwordHashed = "";
 
 
 //---------------------------
-//Test for input account name - Login
+//Test for input account email - Login
 
 
-if (empty ($_POST["username"]))
+if (empty ($_POST["email"]))
 {
     $emptyField = "*Empty Field";
 } else {
-    $name = input_test($_POST["username"]);
+    $email = input_test($_POST["email"]);
 }
 
 
@@ -57,19 +59,19 @@ if (empty ($_POST["password"]))
 {
     $emptyField = "*Empty Field";
 } else {
-    $name = input_test($_POST["password"]);
+    $passwordHashed = input_test($_POST["password"]);
 }
 
 
 //---------------------------
 //Test for input name
 
-if (empty ($_POST["name"]))
+if (empty ($_POST["lastName"]))
 {
     $emptyField = "*Empty Field";
     //echo $nameErr;
 } else {
-    $name = input_test($_POST["name"]);
+    $lastName = input_test($_POST["lastName"]);
 }
 
 
@@ -100,19 +102,6 @@ if (empty ($_POST["email"]))
 
 
 //---------------------------
-//Test for input usernameRegistration
-
-
-/*if (empty ($_POST["usernameRegistration"]))
-{
-    $emptyField = "*Empty Field";
-    //echo $usernameRegistrationErr;
-} else {
-    $usernameRegistration = input_test($_POST["usernameRegistration"]);
-}*/
-
-
-//---------------------------
 //Test for input passwordRegistration
 
 
@@ -121,11 +110,8 @@ if (empty ($_POST["passwordRegistration"]))
     $emptyField = "*Empty Field";
     //echo $passwordRegistrationErr;
 } else {
-    $passwordRegistration = input_test($_POST["passwordRegistration"]);
+    $passwordHashed = input_test($_POST["passwordRegistration"]);
 }
-
-// TO CREATE USER:
-// new Database().createUser($firstName, $lastName, $email, $passwordRegistration);
 
 
 //---------------------------
@@ -138,10 +124,9 @@ function input_test($data)
 }
 
 //---------------------------/////////////////////////////////////////////////
-// checkPassword function
+// ?????????????
 
-
+/*if (isset($name,))*/
 
 //---------------------------
 // communication between 'loginPage.php' & 'data.php'
-include ('loginPage.php');
