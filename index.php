@@ -6,5 +6,7 @@
 <?php
     require_once 'src/loginPage.php';
 ?>
+
+<a href="src/board.php">BOARD</a>
 </body>
 </html>

@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../style/reset.css">
-  <link rel="stylesheet" href="../style/board.css">
-  <title>Document</title>
-</head>
+<?php require ('head.php'); ?>
 <body>
 
   <div class="boardPage">
@@ -73,6 +66,8 @@
 
     </div>
   </div>
+<a href="addCard.php">ADD CARD</a>
+<a href="modal.php">MODAL</a>
 
 </body>
 </html>
