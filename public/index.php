@@ -6,7 +6,7 @@
 <body>
 <?php
     require_once('../src/loginPage.php');
-    var_dump($db->createLane(2, 'first'));
+
 
 ?>
 
