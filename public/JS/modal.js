@@ -1,6 +1,7 @@
-var btn = document.querySelector('button');
+var btn = document.querySelector('.cardArea_buttonEdit');
 var modal = document.querySelector('.modal');
 var overlay = document.querySelector('.modal_overlay');
+
 
 btn.addEventListener('click', function(){
     modal.style.display= 'block';

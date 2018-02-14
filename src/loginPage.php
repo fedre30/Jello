@@ -57,7 +57,7 @@
                     <div id="validationPasswordRegister" class="validation"><img src="imgs/tick.png" alt="tick"></div>
                 </div>
                 <div class="registerFieldsSubmit"><input id="validate" type="submit" value="Submit" name="submitRegistration"></div>
-                <div class="disclaimerRegister"><p>Register to access Gello.</p></div>
+                <div class="disclaimerRegister"><p>Register to access Jello.</p></div>
             </div>
         </div>
 

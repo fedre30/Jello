@@ -10,25 +10,22 @@
 
 <div class="modal">
     <div class="modal_overlay">
-        <div class="modal_content">
 
-            
-
-            <h4 class="modal_title"><?= $card['title'] ?></h4>
-            <p class="modal_list">list : <span class="modal_selectedList"> <?= $lane['name'] ?></span></p>
-            <div class="modal_filter"><input type="color"></div>
-            <p class="modal_description"><?= $card['description'] ?></p>
-
-
-            <div class="modal_addAction">
-                <h4 class="modal_addAction_title">ADD</h4>
-                <p class="modal_addAction_item">Members</p>
-                <p class="modal_addAction_item">Filters</p>
-                <p class="modal_addAction_item">Displace</p>
-                <p class="modal_addAction_item">Delete</p>
-            </div>
         </div>
+    <div class="modal_content">
 
+
+
+        <h4 class="modal_title"><?= $card['title'] ?></h4>
+        <p class="modal_list">list : <span class="modal_selectedList"> <?= $lane['name'] ?></span></p>
+        <div class="modal_filter"><input type="color"></div>
+        <p class="modal_description"><?= $card['description'] ?></p>
+
+
+        <div class="modal_addAction">
+            <p class="modal_addAction_item">Edit</p>
+            <p class="modal_addAction_item">Delete</p>
+        </div>
 
     </div>
 </div>
