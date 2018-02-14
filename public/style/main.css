@@ -562,7 +562,6 @@ body {
 }
 
 .modal_content {
-  position: relative;
   margin: 100px auto;
   box-sizing: border-box;
   padding: 30px;
