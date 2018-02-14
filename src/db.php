@@ -4,9 +4,11 @@ class Database
 {
     const NAME = "jello";
     const HOST = "localhost";
-    const PORT = 8889;
+    const PORT = 3306;
     const USERNAME = "root";
     const PASSWORD = "root";
+
+    private $db;
 
     function __construct()
     {
@@ -24,6 +26,8 @@ class Database
         }
 
     }
+
+    //USER
 
     function createUser($firstName, $lastName, $email, $password)
     {
@@ -60,31 +64,74 @@ class Database
         }
     }
 
+    // CREATE
+
     function createBoard($userId)
     {
         $stmt = $this->db->prepare("INSERT INTO boards(ownerID) VALUES (:userId)");
         $stmt->execute([
             ':userId' => $userId
         ]);
-        // TODO: return true if everything is okay, else false
+        $result = $stmt->rowCount();
+        return $result === 1;
+
     }
 
-    /* function createLane($laneID) {
-         $stmt = $this->db->prepare("INSERT INTO boards(boardID) VALUES (:laneID)");
+    function createCard($title, $description, $tags, $laneId) {
+         $stmt = $this->db->prepare("INSERT INTO cards(title, description, tags, cardPosition) VALUES (:title, :description, :tags, :cardPosition)");
          $stmt->execute([
-             ':laneId' => $laneID;
+             ':title' => $title,
+             ':description' => $description,
+             ':tags' => $tags,
+             ':cardPosition' => $laneId
          ]);
-     }
+         $result = $stmt->rowCount();
+         return $result === 1;
+    }
 
-     function createCard($cardID, $title, $description, $tags, $cardPosition) {
-         $stmt = $this->db->prepare("INSERT INTO board_lane(laneID) VALUES (:cardID, :title, :description, :tags, :cardPosition)");
-         $stmt->execute([
-             ':cardID' => $cardID;
-             ':title' => $title;
-             ':description' => $description;
-             ':tags' => $tags;
-             ':cardPosition' => $cardPosition;
-         ]);
-     }*/
+    // READ
 
+    function getBoardLanes($boardId){
+        $stmt = $this->db->prepare('SELECT * FROM board_lanes WHERE boardID = :boardId');
+        $stmt->execute([':boardId' => $boardId]);
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    function getLanesCards($cardPosition){
+        $stmt = $this->db->prepare('SELECT * FROM cards WHERE cardPosition = :cardPosition');
+        $stmt->execute([':cardPosition'=> $cardPosition]);
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    function getBoardFromCard($cardId){
+        $stmt = $this->db->prepare('SELECT * FROM cards
+                                                  JOIN board_lanes
+                                                    ON  cards.cardPosition = board_lanes.laneID
+                                                  JOIN boards
+                                                    ON board_lanes.boardID = boards.boardID
+                                                WHERE cards.cardID = :cardId');
+        $stmt->execute([':cardId' => $cardId]);
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    //UPDATE
+
+    function updateCard($cardID, $title, $description, $cardPosition){
+        $stmt = $this->db->prepare('UPDATE cards SET title = :title, description = :description, cardPosition = :cardPosition WHERE cardID = :cardID');
+        $stmt->execute([
+            ':cardID'=> $cardID,
+            ':title'=>$title,
+            ':description'=>$description,
+            ':cardPosition'=>$cardPosition
+        ]);
+    }
+
+
+    // DELETE
 }

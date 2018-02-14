@@ -1,9 +1,10 @@
+<?php require_once('init.php'); ?>
 <!DOCTYPE html>
 <html>
 <?php include('head.php'); ?>
 <body>
 
-<?php include('init.php'); ?>
+
 
 <button type="button" name="button"></button>
 

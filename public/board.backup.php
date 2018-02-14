@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require ('head.php'); ?>
+<?php require('../src/head.php'); ?>
 <body>
 
 
@@ -87,8 +87,8 @@
 
     </div>
   </div>
-<a href="addCard.php">ADD CARD</a>
-<a href="modal.php">MODAL</a>
+<a href="../src/addCard.php">ADD CARD</a>
+<a href="../src/modal.php">MODAL</a>
 
 <script src="/JS/addCard.js"></script>
 </body>
