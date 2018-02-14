@@ -28,7 +28,7 @@ $lanes = $db->getBoardLanes($_GET['id']);
           </div>
         </div>
         <?php } ?>
-        <form action="" method="get">
+        <form action="db.php" method="get">
             <label for="cardTitle" class="label-card"></label>
             <input type="text" name="cardTitle" id="cardTitle">
             <label for="description" class="label-card"></label>
@@ -40,7 +40,7 @@ $lanes = $db->getBoardLanes($_GET['id']);
     </div>
     <?php } ?>
     <div class="cardArea_addList">
-      <form action="" method="get">
+      <form action="db.php" method="get">
         <label for="board_lanes" class="label-list"></label>
         <input type="text" name="boardTitle" id="title">
         <input type="submit" value="Submit">
