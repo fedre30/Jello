@@ -144,6 +144,16 @@ class Database
 
 
     // DELETE
+
+    function deleteLane($laneID){
+        $stmt = $this->db->prepare('DELETE FROM board_lanes WHERE laneID = :laneID');
+        $stmt->execute([
+            ':laneID'=>$laneID
+        ]);
+            
+    }
+
+
     function deleteCard($cardID)
     {
         $stmt = $this->db->prepare('DELETE FROM cards WHERE cardID = :cardID');
