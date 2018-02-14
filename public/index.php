@@ -6,8 +6,9 @@
 <body>
 <?php
     require_once('../src/loginPage.php');
-
 ?>
+
+<a href="form.php">FORM</a>
 
 <a href="board.php">BOARD</a>
 </body>

@@ -1,8 +1,11 @@
 <?php require_once('../src/init.php'); ?>
 <?php
-if (false === isset($_GET['id']))
-    die('Missing board ID');
-$lanes = $db->getBoardLanes($_GET['id']);
+$user = $db->createUser('Federica', 'Alfano', 'alfanofederica95@gmail.com', 'root');
+$boards = $db->createBoard(1);
+
+/*if (false === isset($_GET['id']))
+    die('Missing board ID');*/
+$lanes = $db->createLane(1, 'cool');
 ?>
 
 <!DOCTYPE html>
@@ -29,3 +32,4 @@ $lanes = $db->getBoardLanes($_GET['id']);
 </div>
 </body>
 </html>
+
