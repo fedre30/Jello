@@ -10,7 +10,6 @@
     <textarea id="description" name="cardDescription"></textarea>
     <label for="tags" class="label-card">Tags</label>
     <input type="color" id="tags" name="cardTags">
-
 </form>
 
 </body>

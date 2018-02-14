@@ -12,18 +12,12 @@
     <div class="modal_overlay">
         <div class="modal_content">
 
+            
 
-            <h4 class="modal_title">FRONT : modal</h4>
-            <p class="modal_list">list : <span class="modal_selectedList">TO DO</span></p>
+            <h4 class="modal_title"><?= $card['title'] ?></h4>
+            <p class="modal_list">list : <span class="modal_selectedList"> <?= $lane['name'] ?></span></p>
             <div class="modal_filter"><input type="color"></div>
-            <p class="modal_description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident
-            </p>
+            <p class="modal_description"><?= $card['description'] ?></p>
 
 
             <div class="modal_addAction">

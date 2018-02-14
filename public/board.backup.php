@@ -2,7 +2,9 @@
 <html lang="en">
 <?php require('../src/head.php'); ?>
 <body>
-
+<?php
+    require_once '../src/header.php';
+?>
 
 <div class="boardPage">
 
@@ -16,7 +18,7 @@
 
         <!-- TAB -->
         <div class="tabContainer">
-            <!--         <div class="cardArea_container">
+       <!--         <div class="cardArea_container">
                       <h4 class="cardArea_container_title">TITLE TAB</h4>
 
                       <div class="cardArea_wrapper">
