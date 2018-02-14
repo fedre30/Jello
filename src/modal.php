@@ -1,9 +1,10 @@
+<?php require_once('init.php'); ?>
 <!DOCTYPE html>
 <html>
 <?php include('head.php'); ?>
 <body>
 
-<?php include('init.php'); ?>
+
 
 <button type="button" name="button"></button>
 
@@ -14,7 +15,7 @@
 
             <h4 class="modal_title">FRONT : modal</h4>
             <p class="modal_list">list : <span class="modal_selectedList">TO DO</span></p>
-            <div class="modal_filter">color</div>
+            <div class="modal_filter"><input type="color"></div>
             <p class="modal_description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore
@@ -38,6 +39,6 @@
     </div>
 </div>
 </div>
-<script src="../../JS/modal.js" type="text/javascript"></script>
+<script src="../public/JS/modal.js" type="text/javascript"></script>
 </body>
 </html>

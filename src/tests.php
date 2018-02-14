@@ -8,4 +8,4 @@
 
 
 require_once "src/Edition.php";
-require_once "src/index.php";
+require_once "src/CardEdition.php";

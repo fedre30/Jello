@@ -1,5 +1,6 @@
 body {
-  background-color: rgba(0, 0, 0, 0.75);
+  /*background-color: rgba(0, 0, 0, 0.75);*/
+  background: #67597A;
 }
 
 .slidColorTop {
@@ -378,7 +379,7 @@ body {
 .boardPage {
   width: 100%;
   height: 100vh;
-  background: #afb1be;
+  /*background: #afb1be;*/
 }
 
 .cardArea {
@@ -403,11 +404,17 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  width: 720px;
+  width: 280px;
   margin: 10px 0 0 100px;
   padding: 0px 15px;
   border-radius: 10px;
   background-color: #32364A;
+}
+
+.cardArea_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
 }
 
 .cardArea_container_title {
@@ -439,15 +446,13 @@ body {
 
 .cardArea_addList {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 160px;
   height: 80px;
   align-items: center;
   margin: 10px 0px 0px 100px;
-  box-sizing: border-box;
-  padding: 0px 10px;
   border-radius: 10px;
-  background-color: #32364A;
+  background-color: #fff;
 }
 
 .cardArea_addList_img {
@@ -548,7 +553,7 @@ body {
 
 .modal_overlay {
   position: fixed;
-  background: rgba(50, 54, 74, 0.1);
+  background: #393D52;
   z-index: -1;
   top: 0;
   left: 0;
@@ -563,18 +568,20 @@ body {
   width: 800px;
   height: 400px;
   border-radius: 10px;
-  background: #afb1be;
+  background: #393D52;
 }
 
 .modal_title {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #D4EAC8;
 }
 
 .modal_list {
   font-size: 14px;
   margin-bottom: 20px;
+  color: #D4EAC8;
 }
 
 .modal_selectedList {
@@ -588,11 +595,15 @@ body {
 
 .modal_description {
   width: 600px;
+  color: #D4EAC8;
+  line-height: 2em;
+
 }
 
 .modal_addAction {
   display: flex;
   margin-top: 60px;
+  color: #D4EAC8;
 }
 
 .modal_addAction_title {
@@ -615,3 +626,4 @@ body {
   margin-right: 20px;
   cursor: pointer;
 }
+

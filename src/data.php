@@ -7,7 +7,7 @@
  */
 
 /*session_start();*/
-include ('src/init.php');
+require_once ('init.php');
 // LOGIN INTERFACE
 
 /*echo "email : ";

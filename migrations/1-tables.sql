@@ -30,6 +30,22 @@ CREATE TABLE IF NOT EXISTS board_rights (
   userID  INT NOT NULL REFERENCES users (userID)
 );
 
+DROP TRIGGER IF EXISTS new_user;
+DELIMITER //
+CREATE TRIGGER new_user AFTER INSERT ON users FOR EACH ROW
+BEGIN
+    INSERT INTO boards(ownerID) VALUES (NEW.userID);
+END; //
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS new_board;
+DELIMITER //
+CREATE TRIGGER new_board AFTER INSERT ON boards FOR EACH ROW
+  BEGIN
+    INSERT INTO board_lanes(boardID, name) VALUES (NEW.boardID, 'To do'), (NEW.boardID, 'In progress'), (NEW.boardID, 'Done');
+  END; //
+DELIMITER ;
+
 # Example requests:
 
 #SELECT boards.* from users

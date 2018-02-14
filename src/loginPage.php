@@ -15,18 +15,18 @@
             <div class="loginFields">
                 <div class="loginFieldsEmailContainer">
                     <div class="loginrFieldsEmail"><input type="email" class="inputEmail" placeholder="Email adress" name="email"></div>
-                    <div class="icon"><img src="./public/imgs/mail.png" alt="icon"></div>
+                    <div class="icon"><img src="/imgs/mail.png" alt="icon"></div>
                 </div>
                 <div class="loginFieldsPassword"><input id="enterPassword" placeholder="Password" type="password" name="password" >
-                    <div class="icon"><img src="./public/imgs/lock_icon.png" alt="icon"></div>
-                    <div id="validationPassword" class="validation"><img src="./public/imgs/tick.png" alt="tick"></div>
+                    <div class="icon"><img src="/imgs/lock_icon.png" alt="icon"></div>
+                    <div id="validationPassword" class="validation"><img src="/imgs/tick.png" alt="tick"></div>
                 </div>
                 <div class="loginFieldsSubmit"><input id="login" type="submit" value="Submit" name="submit"></div>
                 <div class="forgotContainer">
                     <div class="forgot"><a href="#">Username lost?</a></div>
                     <div class="forgot"><a href="#">Password lost?</a></div>
                 </div>
-                <div class="disclaimerLogin"><p>Log in to your account to access Gello.</p></div>
+                <div class="disclaimerLogin"><p>Log in to your account to access Jello.</p></div>
             </div>
         </div>
 
@@ -48,13 +48,13 @@
                 </div>
                 <div class="registerFieldsEmailContainer">
                     <div class="registerFieldsEmail"><input type="email" class="inputEmail" placeholder="Email adress" name="email"></div>
-                    <div class="icon"><img src="./public/imgs/mail.png" alt="icon"></div>
+                    <div class="icon"><img src="/imgs/mail.png" alt="icon"></div>
                 </div>
                 <div class="registerFieldsPassword"><input id="enterPasswordRegister" placeholder="Password" type="password" name="passwordRegistration">
                     <div class="icon">
-                        <img src="./public/imgs/lock_icon.png" alt="icon">
+                        <img src="/imgs/lock_icon.png" alt="icon">
                     </div>
-                    <div id="validationPasswordRegister" class="validation"><img src="./public/imgs/tick.png" alt="tick"></div>
+                    <div id="validationPasswordRegister" class="validation"><img src="/imgs/tick.png" alt="tick"></div>
                 </div>
                 <div class="registerFieldsSubmit"><input id="validate" type="submit" value="Submit" name="submitRegistration"></div>
                 <div class="disclaimerRegister"><p>Register to access Gello.</p></div>
@@ -63,4 +63,4 @@
 
     </form>
 </div>
-<script type="text/javascript" src="./public/JS/loginAndRegister.js"></script>
+<script type="text/javascript" src="/JS/loginAndRegister.js"></script>
