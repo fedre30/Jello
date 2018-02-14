@@ -112,6 +112,12 @@ class Database
     }
 
     // READ
+    function getUserBoards($userId) {
+        $stmt = $this->db->prepare('SELECT * FROM boards WHERE ownerID = :userId');
+        $stmt->execute([':userId' => $userId]);
+        $result = $stmt->fetchAll();
+        return $result;
+    }
 
     function getBoardLanes($boardId){
         $stmt = $this->db->prepare('SELECT * FROM board_lanes WHERE boardID = :boardId');

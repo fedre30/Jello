@@ -22,7 +22,6 @@ body {
   display: flex;
   justify-content: center;
   padding: 12px 0 12px 0;
-  background-color: #35394a;
   cursor: pointer;
 }
 
@@ -226,10 +225,6 @@ body {
 
 /*-------------*/
 
-.registerScreenContainer {
-  display: none;
-}
-
 .personalInformationContainer {
   display: flex;
   justify-content: space-between;
@@ -372,6 +367,16 @@ body {
   transition-property: background, color;
   -webkit-transition-duration: .2s;
   transition-duration: .2s;
+}
+
+.loginScreen.active, .registerScreen.active {
+  background-color: #35394a;
+}
+
+#login:hover, #validate:hover {
+  background-color: #DC6180;
+  color: white;
+  cursor: pointer;
 }
 
 /* board */
@@ -568,7 +573,7 @@ body {
   width: 800px;
   height: 400px;
   border-radius: 10px;
-  background: black;
+  background: #67597A;
 }
 
 .modal_title {
@@ -585,8 +590,7 @@ body {
 }
 
 .modal_selectedList {
-  text-decoration: underline;
-  cursor: pointer;
+  font-weight: bold;
 }
 
 .modal_filter {

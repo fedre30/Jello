@@ -16,3 +16,14 @@ function authenticatedUserEmail() {
     $cookieData = unserialize($_COOKIE['JelloUser']);
     return $cookieData['email'];
 }
+
+function redirectToIndex() {
+    header("Location: /");
+    die();
+}
+
+function redirectToBoard($db) {
+    $boards = $db->getUserBoards(authenticatedUserId());
+    header("Location: /board.php?id=".$boards[0]['boardID']);
+    die();
+}
