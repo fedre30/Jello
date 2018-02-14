@@ -1,5 +1,3 @@
-
-
 CREATE TABLE IF NOT EXISTS users (
   userID    INT PRIMARY KEY AUTO_INCREMENT,
   lastName  VARCHAR(128) NOT NULL,
@@ -31,6 +29,22 @@ CREATE TABLE IF NOT EXISTS board_rights (
   boardID INT NOT NULL REFERENCES boards (boardID),
   userID  INT NOT NULL REFERENCES users (userID)
 );
+
+DROP TRIGGER IF EXISTS new_user;
+DELIMITER //
+CREATE TRIGGER new_user AFTER INSERT ON users FOR EACH ROW
+BEGIN
+    INSERT INTO boards(ownerID) VALUES (NEW.userID);
+END; //
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS new_board;
+DELIMITER //
+CREATE TRIGGER new_board AFTER INSERT ON boards FOR EACH ROW
+  BEGIN
+    INSERT INTO board_lanes(boardID, name) VALUES (NEW.boardID, 'To do'), (NEW.boardID, 'In progress'), (NEW.boardID, 'Done');
+  END; //
+DELIMITER ;
 
 # Example requests:
 
