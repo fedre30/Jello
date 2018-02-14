@@ -16,7 +16,7 @@
 
         <!-- TAB -->
         <div class="tabContainer">
-            <!--         <div class="cardArea_container">
+       <!--         <div class="cardArea_container">
                       <h4 class="cardArea_container_title">TITLE TAB</h4>
 
                       <div class="cardArea_wrapper">
