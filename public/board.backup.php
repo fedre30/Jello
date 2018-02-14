@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require ('head.php'); ?>
+<?php require('../src/head.php'); ?>
 <body>
 
 
@@ -16,7 +16,7 @@
 
         <!-- TAB -->
         <div class="tabContainer">
-            <!--         <div class="cardArea_container">
+       <!--         <div class="cardArea_container">
                       <h4 class="cardArea_container_title">TITLE TAB</h4>
 
                       <div class="cardArea_wrapper">
@@ -60,7 +60,7 @@
                         </div>
                       </div>
 
-                      <img class="cardArea_addCard" src="../public/imgs/iconPlus.png" alt="addCard" numero="1">
+                      <img class="cardArea_addCard" src="/imgs/iconPlus.png" alt="addCard" numero="1">
 
                     </div>
 
@@ -81,20 +81,15 @@
 
         <div class="cardArea_addList">
             <p>ADD LIST</p>
-            <img class="cardArea_addList_img" src="../public/imgs/iconPlus.png" alt="addList">
+            <img class="cardArea_addList_img" src="/imgs/iconPlus.png" alt="addList">
         </div>
 
 
     </div>
-<<<<<<< HEAD
   </div>
+<a href="../src/addCard.php">ADD CARD</a>
+<a href="../src/modal.php">MODAL</a>
 
-=======
-</div>
->>>>>>> origin/master
-<a href="addCard.php">ADD CARD</a>
-<a href="modal.php">MODAL</a>
-
-<script src="../public/JS/addCard.js"></script>
+<script src="/JS/addCard.js"></script>
 </body>
 </html>
