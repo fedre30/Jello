@@ -16,15 +16,8 @@ class Database
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
         ];
 
-        try {
-            $this->db = new PDO('mysql:host=' . Database::HOST . ':' . Database::PORT . ';dbname=' . Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
-        } catch (PDOException $conn) {
-            $conn = new PDO("mysql:host=" . Database::HOST , Database::USERNAME, Database::PASSWORD);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "CREATE DATABASE IF NOT EXISTS jello";
-            $conn->exec($sql);
-        }
-
+        $this->db = new PDO('mysql:host=' . Database::HOST . ':' . Database::PORT . ';dbname=' . Database::NAME, Database::USERNAME, Database::PASSWORD, $options);
+        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
     //USER
@@ -64,14 +57,15 @@ class Database
         }
     }
 
-    function updateUser($userID, $lastName, $firstName, $email, $password){
-        $stmt=$this->db->prepare('UPDATE users SET lastName = :lastName, firstName = :firstName, email = :email, password = :password WHERE userID = :userID ');
+    function updateUser($userID, $lastName, $firstName, $email, $password)
+    {
+        $stmt = $this->db->prepare('UPDATE users SET lastName = :lastName, firstName = :firstName, email = :email, password = :password WHERE userID = :userID ');
         $stmt->execute([
-           ':userID'=>$userID,
-           ':lastName'=>$lastName,
-           ':firstName'=>$firstName,
-           ':email'=>$email,
-           ':password'=>$password
+            ':userID' => $userID,
+            ':lastName' => $lastName,
+            ':firstName' => $firstName,
+            ':email' => $email,
+            ':password' => $password
 
         ]);
     }
@@ -89,37 +83,51 @@ class Database
 
     }
 
-    function createLane($boardID, $title){
-        $stmt =  $this->db->prepare("INSERT INTO board_lanes VALUES (:boardID, :title)");
+    function createLane($boardID, $title)
+    {
+        $stmt = $this->db->prepare("INSERT INTO board_lanes VALUES (:boardID, :title)");
         $stmt->execute([
-           ':boardID' => $boardID,
-            ':title'=>$title
+            ':boardID' => $boardID,
+            ':title' => $title
         ]);
         $result = $stmt->rowCount();
         return $result === 1;
     }
 
-    function createCard($title, $description, $tags, $laneId) {
-         $stmt = $this->db->prepare("INSERT INTO cards(title, description, tags, cardPosition) VALUES (:title, :description, :tags, :cardPosition)");
-         $stmt->execute([
-             ':title' => $title,
-             ':description' => $description,
-             ':tags' => $tags,
-             ':cardPosition' => $laneId
-         ]);
-         $result = $stmt->rowCount();
-         return $result === 1;
+    function createCard($title, $description, $laneId)
+    {
+        $stmt = $this->db->prepare("INSERT INTO cards(title, description, cardPosition) VALUES (:title, :description, :cardPosition)");
+        $stmt->execute([
+            ':title' => $title,
+            ':description' => $description,
+            ':cardPosition' => $laneId
+        ]);
+        $result = $stmt->rowCount();
+        return $result === 1;
     }
 
     // READ
-    function getUserBoards($userId) {
+    function getBoard($boardID)
+    {
+        $stmt = $this->db->prepare('SELECT * FROM boards WHERE boardID = :boardID');
+        $stmt->execute([':boardID' => $boardID]);
+        $result = $stmt->fetchAll();
+        if (count($result) === 0) {
+            return false;
+        }
+        return $result[0];
+    }
+
+    function getUserBoards($userId)
+    {
         $stmt = $this->db->prepare('SELECT * FROM boards WHERE ownerID = :userId');
         $stmt->execute([':userId' => $userId]);
         $result = $stmt->fetchAll();
         return $result;
     }
 
-    function getBoardLanes($boardId){
+    function getBoardLanes($boardId)
+    {
         $stmt = $this->db->prepare('SELECT * FROM board_lanes WHERE boardID = :boardId');
         $stmt->execute([':boardId' => $boardId]);
         $result = $stmt->fetchAll();
@@ -127,15 +135,17 @@ class Database
         return $result;
     }
 
-    function getLanesCards($cardPosition){
+    function getLanesCards($cardPosition)
+    {
         $stmt = $this->db->prepare('SELECT * FROM cards WHERE cardPosition = :cardPosition');
-        $stmt->execute([':cardPosition'=> $cardPosition]);
+        $stmt->execute([':cardPosition' => $cardPosition]);
         $result = $stmt->fetchAll();
 
         return $result;
     }
 
-    function getBoardFromCard($cardId){
+    function getBoardFromCard($cardId)
+    {
         $stmt = $this->db->prepare('SELECT * FROM cards
                                                   JOIN board_lanes
                                                     ON  cards.cardPosition = board_lanes.laneID
@@ -148,7 +158,8 @@ class Database
         return $result;
     }
 
-    function getUserInformation($userID) {
+    function getUserInformation($userID)
+    {
         $request = 'SELECT `lastName`, `firstName`, `email`, `password` FROM `users` WHERE `userID` = :userID;';
 
         $stmt = $this->db->prepare($request);
@@ -161,32 +172,39 @@ class Database
 
     //UPDATE
 
-    function updateCard($cardID, $title, $description, $cardPosition){
+    function updateCard($cardID, $title, $description, $cardPosition)
+    {
         $stmt = $this->db->prepare('UPDATE cards SET title = :title, description = :description, cardPosition = :cardPosition WHERE cardID = :cardID');
         $stmt->execute([
-            ':cardID'=> $cardID,
-            ':title'=>$title,
-            ':description'=>$description,
-            ':cardPosition'=>$cardPosition
+            ':cardID' => $cardID,
+            ':title' => $title,
+            ':description' => $description,
+            ':cardPosition' => $cardPosition
         ]);
+
+        return $stmt->rowCount() === 1;
     }
 
-    function updateLane($laneID, $boardID, $name){
+    function updateLane($laneID, $boardID, $name)
+    {
         $stmt = $this->db->prepare('UPDATE board_lanes SET boardID = :boardID, name = :name WHERE laneID = :laneID');
         $stmt->execute([
-            ':laneID'=>$laneID,
-            ':boardID'=>$boardID,
-            ':name'=>$name
+            ':laneID' => $laneID,
+            ':boardID' => $boardID,
+            ':name' => $name
         ]);
     }
 
     // DELETE
 
-    function deleteLane($laneID){
+    function deleteLane($laneID)
+    {
         $stmt = $this->db->prepare('DELETE FROM board_lanes WHERE laneID = :laneID');
         $stmt->execute([
-            ':laneID'=>$laneID
+            ':laneID' => $laneID
         ]);
+
+
 
     }
 
@@ -194,7 +212,10 @@ class Database
     {
         $stmt = $this->db->prepare('DELETE FROM cards WHERE cardID = :cardID');
         $stmt->execute([
-            ':cardID'=>$cardID
+            ':cardID' => $cardID
         ]);
+
+        return $stmt->rowCount() === 1;
     }
+
 }

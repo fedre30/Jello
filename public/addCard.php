@@ -1,5 +1,5 @@
 <?php
-require_once ('init.php');
+require_once('../src/init.php');
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(isset($_POST['title']) && $_POST['title'] !==''){
@@ -14,14 +14,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
        $description = $_POST['description'];
     }
 
-    if(isset($_POST['cardPosition']){
+    if(isset($_POST['cardPosition'])){
         $cardPosition = $_POST['cardPosition'];
     }
     else{
         die('LaneID is required');
     }
 
-    if($db->createCard($title, $description, 0, $cardPosition)){
+    if($db->createCard($title, $description, $cardPosition)){
         redirectToBoard($db);
     }
 }
