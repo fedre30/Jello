@@ -64,6 +64,18 @@ class Database
         }
     }
 
+    function updateUser($userID, $lastName, $firstName, $email, $password){
+        $stmt=$this->db->prepare('UPDATE users SET lastName = :lastName, firstName = :firstName, email = :email, password = :password WHERE userID = :userID ');
+        $stmt->execute([
+           ':userID'=>$userID,
+           ':lastName'=>$lastName,
+           ':firstName'=>$firstName,
+           ':email'=>$email,
+           ':password'=>$password
+
+        ]);
+    }
+
     // CREATE
 
     function createBoard($userId)
@@ -75,6 +87,16 @@ class Database
         $result = $stmt->rowCount();
         return $result === 1;
 
+    }
+
+    function createLane($boardID, $title){
+        $stmt =  $this->db->prepare("INSERT INTO board_lanes VALUES (:boardID, :title)");
+        $stmt->execute([
+           ':boardID' => $boardID,
+            ':title'=>$title
+        ]);
+        $result = $stmt->rowCount();
+        return $result === 1;
     }
 
     function createCard($title, $description, $tags, $laneId) {
@@ -143,6 +165,30 @@ class Database
         ]);
     }
 
+    function updateLane($laneID, $boardID, $name){
+        $stmt = $this->db->prepare('UPDATE board_lanes SET boardID = :boardID, name = :name WHERE laneID = :laneID');
+        $stmt->execute([
+            ':laneID'=>$laneID,
+            ':boardID'=>$boardID,
+            ':name'=>$name
+        ]);
+    }
 
     // DELETE
+
+    function deleteLane($laneID){
+        $stmt = $this->db->prepare('DELETE FROM board_lanes WHERE laneID = :laneID');
+        $stmt->execute([
+            ':laneID'=>$laneID
+        ]);
+
+    }
+
+    function deleteCard($cardID)
+    {
+        $stmt = $this->db->prepare('DELETE FROM cards WHERE cardID = :cardID');
+        $stmt->execute([
+            ':cardID'=>$cardID
+        ]);
+    }
 }
