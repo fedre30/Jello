@@ -1,10 +1,10 @@
 <?php
+    require_once '../src/init.php';
+
     if (!isset($_GET['userID'])) {
         header('Location: index.php?error=noidprovidedaccount.php');
         exit;
     }
-
-    require_once '../src/init.php';
 
     $row = $db->getUserInformation($_GET['userID']);
 /*
