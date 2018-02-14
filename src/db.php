@@ -77,6 +77,16 @@ class Database
 
     }
 
+    function createLane($boardID, $title){
+        $stmt =  $this->db->prepare("INSERT INTO board_lanes VALUES (:boardID, :title)");
+        $stmt->execute([
+           ':boardID' => $boardID,
+            ':title'=>$title
+        ]);
+        $result = $stmt->rowCount();
+        return $result === 1;
+    }
+
     function createCard($title, $description, $tags, $laneId) {
          $stmt = $this->db->prepare("INSERT INTO cards(title, description, tags, cardPosition) VALUES (:title, :description, :tags, :cardPosition)");
          $stmt->execute([
