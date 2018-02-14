@@ -64,6 +64,18 @@ class Database
         }
     }
 
+    function updateUser($userID, $lastName, $firstName, $email, $password){
+        $stmt=$this->db->prepare('UPDATE users SET lastName = :lastName, firstName = :firstName, email = :email, password = :password WHERE userID = :userID ');
+        $stmt->execute([
+           ':userID'=>$userID,
+           ':lastName'=>$lastName,
+           ':firstName'=>$firstName,
+           ':email'=>$email,
+           ':password'=>$password
+
+        ]);
+    }
+
     // CREATE
 
     function createBoard($userId)
@@ -130,6 +142,17 @@ class Database
         return $result;
     }
 
+    function getUserInformation($userID) {
+        $request = 'SELECT `lastName`, `firstName`, `email`, `password` FROM `users` WHERE `userID` = :userID;';
+
+        $stmt = $this->db->prepare($request);
+        $stmt->bindValue(':userID', $userID);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $row;
+    }
+
     //UPDATE
 
     function updateCard($cardID, $title, $description, $cardPosition){
@@ -142,6 +165,14 @@ class Database
         ]);
     }
 
+    function updateLane($laneID, $boardID, $name){
+        $stmt = $this->db->prepare('UPDATE board_lanes SET boardID = :boardID, name = :name WHERE laneID = :laneID');
+        $stmt->execute([
+            ':laneID'=>$laneID,
+            ':boardID'=>$boardID,
+            ':name'=>$name
+        ]);
+    }
 
     // DELETE
 
@@ -150,9 +181,8 @@ class Database
         $stmt->execute([
             ':laneID'=>$laneID
         ]);
-            
-    }
 
+    }
 
     function deleteCard($cardID)
     {

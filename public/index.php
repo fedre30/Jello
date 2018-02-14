@@ -7,9 +7,8 @@
 <?php
     require_once('../src/loginPage.php');
 
-var_dump
 ?>
 
-<a href="board.backup.php">BOARD</a>
+<a href="board.php">BOARD</a>
 </body>
 </html>

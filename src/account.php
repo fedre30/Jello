@@ -4,13 +4,16 @@
         exit;
     }
 
-    //require_once 'init.php';
+    require_once '../src/init.php';
 
+    $row = $db->getUserInformation($_GET['userID']);
+/*
     try {
         $conn = new PDO('mysql:host=localhost;dbname=jello', 'root', 'root');
     } catch (PDOException $e) {
         die($e->getMessage());
     }
+
 
     $request = 'SELECT `lastName`, `firstName`, `email`, `password` FROM `users` WHERE `userID` = :userID;';
 
@@ -18,6 +21,7 @@
     $stmt->bindValue(':userID', $_GET['userID']);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    */
 ?>
 <!doctype html>
 <html lang="en">
