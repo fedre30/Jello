@@ -120,6 +120,17 @@ class Database
         return $result;
     }
 
+    function getUserInformation($userID) {
+        $request = 'SELECT `lastName`, `firstName`, `email`, `password` FROM `users` WHERE `userID` = :userID;';
+
+        $stmt = $this->db->prepare($request);
+        $stmt->bindValue(':userID', $userID);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $row;
+    }
+
     //UPDATE
 
     function updateCard($cardID, $title, $description, $cardPosition){
