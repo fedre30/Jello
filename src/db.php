@@ -147,7 +147,7 @@ class Database
     function deleteCard($cardID)
     {
         $stmt = $this->db->prepare('DELETE FROM cards WHERE cardID = :cardID');
-        $stmt ->execute([
+        $stmt->execute([
             ':cardID'=>$cardID
         ]);
     }
