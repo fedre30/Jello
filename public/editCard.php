@@ -5,7 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['title']) && $_POST['title'] !== '') {
         $title = htmlentities($_POST['title']);
     } else {
-        die('Title is required');
+        $error = 'Title is required';
+        require_once('../src/error.php');
+        exit;
     }
 
     $description = '';
@@ -16,13 +18,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['cardPosition'])) {
         $cardPosition = $_POST['cardPosition'];
     } else {
-        die('LaneID is required');
+        $error = 'Lane ID is required';
+        require_once('../src/error.php');
+        exit;
     }
 
     if (isset($_POST['cardID'])) {
         $cardID = $_POST['cardID'];
     } else {
-        die('no CardID');
+        $error = 'No card ID';
+        require_once('../src/error.php');
+        exit;
     }
 
     $db->updateCard($cardID, $title, $description, $cardPosition);

@@ -6,7 +6,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $title = $_POST['title'];
     }
     else{
-        die('Title is required');
+        $error = 'Title is required';
+        require_once('../src/error.php');
+        exit;
     }
 
     $description = '';
@@ -18,7 +20,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $cardPosition = $_POST['cardPosition'];
     }
     else{
-        die('LaneID is required');
+        $error = 'Lane ID is required';
+        require_once('../src/error.php');
+        exit;
     }
 
     if($db->createCard($title, $description, $cardPosition)){

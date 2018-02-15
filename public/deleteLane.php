@@ -6,7 +6,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $laneID = $_POST['laneID'];
     }
     else{
-        die('no laneID');
+        $error = 'No lane ID';
+        require_once('../src/error.php');
+        exit;
     }
 
     if($db->deleteLane($laneID)){

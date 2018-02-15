@@ -6,7 +6,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $name = htmlentities($_POST['name']);
     }
     else{
-        die('Name is required');
+        $error = 'Name is required';
+        require_once('../src/error.php');
+        exit;;
     }
 
 
@@ -14,7 +16,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $boardID = $_POST['boardID'];
     }
     else{
-        die('BoardID is required');
+        $error = 'Board ID is required';
+        require_once('../src/error.php');
+        exit;
     }
 
     if($db->createLane($boardID, $name)){

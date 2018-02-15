@@ -6,7 +6,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $cardID = $_POST['cardID'];
     }
     else{
-        die('no CardID');
+        $error = 'No card ID';
+        require_once('../src/error.php');
+        exit;
     }
 
     if($db->deleteCard($cardID)){
