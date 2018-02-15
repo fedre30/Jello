@@ -3,7 +3,7 @@ require_once('../src/init.php');
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(isset($_POST['name']) && $_POST['name'] !==''){
-        $name = $_POST['name'];
+        $name = htmlentities($_POST['name']);
     }
     else{
         die('Name is required');

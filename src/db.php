@@ -193,6 +193,8 @@ class Database
             ':boardID' => $boardID,
             ':name' => $name
         ]);
+
+        return $stmt->rowCount() === 1;
     }
 
     // DELETE
