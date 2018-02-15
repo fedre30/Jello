@@ -15,13 +15,15 @@ $row = $db->getUserInformation($_GET['id']);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Account</title>
+    <link rel="stylesheet" href="style/main.css" />
 </head>
-<body>
-<a href="board.php?id=<?= $_GET['id'] ?>">Go back</a>
+<body class="account">
+<p><span class="field">First name:</span> <?= $row['firstName'] ?></p>
+<p><span class="field">Last name:</span> <?= $row['lastName'] ?></p>
+<p><span class="field">E-mail:</span> <?= $row['email'] ?></p>
 
-<p>First name: <?= $row['firstName'] ?></p>
-<p>Last name: <?= $row['lastName'] ?></p>
-<p>E-mail: <?= $row['email'] ?></p>
+
+<a href="board.php?id=<?= $_GET['id'] ?>">Go back</a>
 </body>
 </html>

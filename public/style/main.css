@@ -656,3 +656,17 @@ form {
     line-height: 140px;
 }
 
+/* ACCOUNT */
+
+.account {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.account .field {
+    font-weight: 600;
+
+}
+
+.account a {
+    color: white;
+}
