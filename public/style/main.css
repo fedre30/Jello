@@ -379,7 +379,68 @@ body {
   cursor: pointer;
 }
 
-/* board */
+/* BOARD */
+
+
+.boardPage input[type='text']{
+  border-bottom: 2px solid #DC6180;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.boardPage input::placeholder{
+  color: white;
+}
+
+.boardPage input[type='submit']{
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #DC6180;
+  margin: 10px 0 5px 0;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.boardPage input[type='submit']:hover{
+  border: 1px solid white;
+  color: white;
+}
+
+.boardPage textarea{
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  margin-top: 5px;
+}
+
+.boardPage input[type='text']:focus{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid #DC6180;
+}
+
+.formAddLane {
+  margin-left: 18px;
+}
+
+.formEditCard {
+  height: 20px !important;
+}
+
+#description {
+  height: 40px !important;
+}
+
+.formAddCard {
+  margin: 0 20px;
+}
 
 .boardPage {
   width: 100vw;
@@ -401,17 +462,24 @@ body {
 
 .cardArea_container {
   position: relative;
-  height: 140px;
-  width: 100%;
-  margin: 10px 0;
+  height: 220px;
+  width: 98%;
+  margin: 10px auto;
   border-radius: 10px;
   background-color: #32364A;
 }
 
+.cardArea_container label{
+  color: white;
+
+}
+
 .cardArea_container > div {
   display: inline-block;
-  height: 140px;
-  margin: 0;
+  float: left;
+  height: 210px;
+  margin: 5px;
+  box-sizing: border-box;
 }
 
 .cardArea_container_title {
@@ -424,14 +492,50 @@ body {
 
 .cardArea_card {
   box-sizing: border-box;
-  width: 180px;
+  width: 240px;
   padding: 5px;
-  background-color: #afb1be;
+  background-color: #67597A;
   border-radius: 10px;
+  margin: 0 10px;
+  position: relative;
 }
 
 .cardArea_addCard{
   width: 200px;
+}
+
+.cardTitle {
+  height: 36px;
+}
+
+label[for="description"] {
+  display: block;
+}
+
+textarea.description {
+  display: block;
+  width: 97%;
+  height: 60px;
+}
+
+select {
+  margin-top: 8px;
+  display: block;
+  width: 100%;
+}
+
+form {
+  display: inline-block;
+}
+
+.editForm {
+  width: 100%;
+}
+
+.deleteForm {
+  position: absolute;
+  bottom: 18px;
+  right: 5px;
 }
 
 .cardArea_addCard label{

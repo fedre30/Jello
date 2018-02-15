@@ -27,3 +27,8 @@ function redirectToBoard($db) {
     header("Location: /board.php?id=".$boards[0]['boardID']);
     die();
 }
+
+function logOut() {
+    setcookie('JelloUser', null, -1);
+    redirectToIndex();
+}

@@ -10,7 +10,7 @@ if (isAuthenticated()) {
 } else {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['email']) && $_POST['email'] !== '') {
-            $email = $_POST['email'];
+            $email = htmlentities($_POST['email']);
         } else {
             $error = '* Empty email';
             require_once('../src/registerPage.php');
@@ -18,7 +18,7 @@ if (isAuthenticated()) {
         }
 
         if (isset($_POST['password']) && $_POST['password'] !== '') {
-            $password = $_POST['password'];
+            $password = htmlentities($_POST['password']);
         } else {
             $error = '* Empty password';
             require_once('../src/registerPage.php');
@@ -26,7 +26,7 @@ if (isAuthenticated()) {
         }
 
         if (isset($_POST['firstName']) && $_POST['firstName'] !== '') {
-            $firstName = $_POST['firstName'];
+            $firstName = htmlentities($_POST['firstName']);
         } else {
             $error = '* Empty first name';
             require_once('../src/registerPage.php');
@@ -34,7 +34,7 @@ if (isAuthenticated()) {
         }
 
         if (isset($_POST['lastName']) && $_POST['lastName'] !== '') {
-            $lastName = $_POST['lastName'];
+            $lastName = htmlentities($_POST['lastName']);
         } else {
             $error = '* Empty last name';
             require_once('../src/registerPage.php');
