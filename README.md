@@ -13,7 +13,7 @@ Dans *db.php*, on crée une fonction **createUser()** qui prend en paramètre le
 function createUser($firstName, $lastName, $email, $password)
 ```
 
-Elle contient notamment la préparation de la **requette SQL** suivante :
+Elle contient notamment la préparation de la **requête SQL** suivante :
 
 ```PHP
 prepare("INSERT INTO users (lastName, firstName, email, password) VALUES (:lastName, :firstName, :email, :password)");
@@ -34,7 +34,7 @@ Les **variables** stock la saisie des **inputs** du formulaire. Les éléments d
 ```
 ### Read - Formulaire
 
-Dans *db.php*, on crée une fonction **getUserInformation($userID)** qui prend en paramètre `$userID` et récupère dans une variable **`$request`**,les informations lié à `lastName`, `firstName`, `email`, `password` de la table **`users`**.
+Dans *db.php*, on crée une fonction **getUserInformation($userID)** qui prend en paramètre `$userID` et récupère dans une variable **`$request`**,les informations liées à `lastName`, `firstName`, `email`, `password` de la table **`users`**.
 
 ```PHP
 $request = 'SELECT `lastName`, `firstName`, `email`, `password` FROM `users` WHERE `userID` = :userID;';
@@ -77,7 +77,7 @@ $stmt->execute([':email' => $email]);
 On stock ensuite dans la variable **$result** ce que fetchAll à reçu de la variable **$stmt**, soit la requête SQL.
 `$result = $stmt->fetchAll();`
 
-Puis on effectue une vérification pour savoir le nombre d'éléments que contient **$result**. S'il est strictement égale à 0, alors **false** est retourné à la fonction **connectUser()**.
+Puis on effectue une vérification pour savoir le nombre d'éléments que contient **$result**. S'il est strictement égal à 0, alors **false** est retourné à la fonction **connectUser()**.
 
 On va ensuite protéger le password envoyé en effectuent un hashage avec la méthode : *PASSWORD_BCRYPT*
 
@@ -126,7 +126,7 @@ Ici encore ```=>``` est un équivalent de ```bindValue()``` dans l'exécution.
 
 ### Create - Board
 
-Dans *db.php*, on crée une fonction **createBoard()** qui prends en paramètre une variable.
+Dans *db.php*, on crée une fonction **createBoard()** qui prend en paramètre la variable qui contient l'ID de l'utilisateur.
 
 Cette fonction contient notamment la préparation de la requette SQL suivante :
 
@@ -143,7 +143,7 @@ Et qui l'exécute :
 
 ### Read - Board     
 
-Dans *db.php* on crée une fonction **getBoard()** qui prends en paramètre une variable.
+Dans *db.php* on crée une fonction **getBoard()** qui prend en paramètre une variable.
 
 On viens ensuite préparer la requête SQL pour venir lire le contenu de la table *boards*.
 
@@ -169,7 +169,7 @@ if (count($result) === 0) {
 
 ### Create - Card
 
-Dans *db.php* on crée une fonction **createCard()** qui prends en paramètre les variables `$title`, `$description`, `$laneId`.
+Dans *db.php* on crée une fonction **createCard()** qui prend en paramètre les variables `$title`, `$description`, `$laneId`.
 
 On vient ensuite préparer la requête SQL pour ajouter de contenu dans la table *cards*.
 
@@ -185,7 +185,7 @@ $stmt->execute([
 
 ### Read - Card
 
-Dans *db.php* on crée une fonction **getBoardFromCard()** qui prends en paramètre la variable `$cardId`.
+Dans *db.php* on crée une fonction **getBoardFromCard()** qui prend en paramètre la variable `$cardId`.
 
 On vient ensuite préparer la requête SQL.
 ```PHP
@@ -226,7 +226,7 @@ return $stmt->rowCount() === 1;
 
 ### Delete - Card
 
-Dans *db.php* on crée une fonction **deleteCard()** qui prends en paramètre la variable *$cardID*.
+Dans *db.php* on crée une fonction **deleteCard()** qui prend en paramètre la variable *$cardID*.
 
 On prépare la requête SQL et on l'exécute : 
 
@@ -236,7 +236,7 @@ On prépare la requête SQL et on l'exécute :
             ':cardID' => $cardID
         ]);
 ```
-Enfin, on lie cette requête, contenue dans *$stmt* à *rowCount()* qui va retourner le nombre de lignes affectées et qui doit être égale à 1 pour être correctement retourner.
+Enfin, on lie cette requête, contenue dans *$stmt* à *rowCount()* qui va retourner le nombre de lignes affectées et qui doit être égale à 1 pour être correctement retournée.
 
 ```PHP
 return $stmt->rowCount() === 1;
