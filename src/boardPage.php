@@ -49,8 +49,7 @@
                         </div>
                         <label for="description-<?= $card['cardID'] ?>">Description</label>
                         <textarea class="description" name="description"
-                                  id="description-<?= $card['cardID'] ?>"><?= $card['description'] ?>
-                        </textarea>
+                                  id="description-<?= $card['cardID'] ?>"><?= $card['description'] ?></textarea>
                         <select name="cardPosition">
                             <?php foreach ($lanes as $lanePosition) { ?>
                                 <option value="<?= $lanePosition['laneID'] ?>"
