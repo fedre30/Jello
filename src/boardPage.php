@@ -4,11 +4,23 @@
 <body>
 <div class="boardPage">
     <div class="toolBar">
-        <h4 class="toolBar_title">SEMAINE INTENSIVE PHP</h4>
+        <h4 class="toolBar_title">JELLO</h4>
     </div>
+
+
+    <form action="addLane.php" method="post">
+        <input type="hidden" name="boardID" value="<?= $board['boardID'] ?>">
+        <input type="text" name="name" placeholder="Name">
+        <input type="submit">
+    </form>
     <?php foreach ($lanes as $lane) { ?>
         <div class="cardArea_container">
             <?php $cards = $db->getLanesCards($lane['laneID']); ?>
+            <form  class="deleteLane" action="deleteLane.php" method="post">
+                <input type="hidden" name="laneID" value="<?= $lane['laneID'] ?>" >
+                <input type="submit" value="Delete">
+            </form>
+
             <div class="cardArea_container_title"><?= $lane['name'] ?></div>
 
             <div class="cardArea_addCard">
@@ -46,13 +58,17 @@
 
                     <form action="deleteCard.php" method="post">
                         <input type="hidden" name="cardID" value="<?= $card['cardID'] ?>">
-                        <input type="submit" value="delete">
+                        <input type="submit" value="Delete">
                     </form>
                 </div>
             <?php } ?>
+
+
         </div>
 
     <?php } ?>
+
+
 
 </div>
 

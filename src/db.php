@@ -83,12 +83,12 @@ class Database
 
     }
 
-    function createLane($boardID, $title)
+    function createLane($boardID, $name)
     {
-        $stmt = $this->db->prepare("INSERT INTO board_lanes VALUES (:boardID, :title)");
+        $stmt = $this->db->prepare("INSERT INTO board_lanes(boardID, name) VALUES (:boardID, :name)");
         $stmt->execute([
             ':boardID' => $boardID,
-            ':title' => $title
+            ':name' => $name
         ]);
         $result = $stmt->rowCount();
         return $result === 1;
@@ -204,7 +204,7 @@ class Database
             ':laneID' => $laneID
         ]);
 
-
+        return $stmt->rowCount() === 1;
 
     }
 
