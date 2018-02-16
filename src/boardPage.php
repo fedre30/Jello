@@ -20,6 +20,11 @@
 
             <div class="cardArea_container_title">
                 <div style="margin-top: 40px;"><?= $lane['name'] ?></div>
+                <form action="editLane.php" method="post">
+                    <input type="hidden" name="laneID" value="<?= $lane['laneID'] ?>">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="submit" value="Edit">
+                </form>
 
                 <form class="deleteLane" action="deleteLane.php" method="post">
                     <input type="hidden" name="laneID" value="<?= $lane['laneID'] ?>">

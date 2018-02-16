@@ -9,7 +9,7 @@
         </div>
         <div class="navBar__research">
             <label for=""></label> <input class="navBar__researchInputText" type="text" placeholder="">
-            <button class="navBar__researchBtn">research</button>
+            <button class="navBar__researchBtn">search</button>
         </div>
         <div class="navBar__account">
             <a href="account.php?id=<?=$_GET['id']?>" class="navBar__accountText">My account</a>

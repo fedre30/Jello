@@ -185,12 +185,11 @@ class Database
         return $stmt->rowCount() === 1;
     }
 
-    function updateLane($laneID, $boardID, $name)
+    function updateLane($laneID, $name)
     {
-        $stmt = $this->db->prepare('UPDATE board_lanes SET boardID = :boardID, name = :name WHERE laneID = :laneID');
+        $stmt = $this->db->prepare('UPDATE board_lanes SET name = :name WHERE laneID = :laneID');
         $stmt->execute([
             ':laneID' => $laneID,
-            ':boardID' => $boardID,
             ':name' => $name
         ]);
 
