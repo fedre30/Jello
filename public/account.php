@@ -7,6 +7,7 @@ if (!isset($_GET['id'])) {
 }
 
 $row = $db->getUserInformation($_GET['id']);
+var_dump($row);
 ?>
 <!doctype html>
 <html lang="en">

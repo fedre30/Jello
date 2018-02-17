@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     else{
         $error = 'Name is required';
         require_once('../src/error.php');
-        exit;;
+        exit;
     }
 
 
